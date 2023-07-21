@@ -107,7 +107,7 @@
 <!--Contact Section starts-->
 <section class="contact" id="contact">
    <h2 class=heading>Contact<span>Me!</span></h2>
-    <form action="#">
+    <form  name="submit-to-google-sheet">
         <div class="input-box">
             <input type="text"placeholder="Full Name">
             <input type="text"placeholder="Email Address">
@@ -117,7 +117,7 @@
             <input type="text"placeholder="Email Subject">
         </div>
         <textarea name="" id="" cols="30" rows="10" placeholder="your Message"></textarea>
-        <input type="submit" value="send Message" class="btn" >
+        <a class="btn" href="mailto:chaithraabhi779@gmail.com">Send Message</a>
     </form>
 </section>
 <footer class="footer">
@@ -153,6 +153,16 @@
 
 <!--custom js-->
 <script src="./script.js"></script>
-
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyWACnfqljpSRofDRYbTN26LDppCARUw5zhTY9O0O_Z6CSL-gmo136sXll3gQM6gFr7sA/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 </body>
 </html>
