@@ -11,8 +11,8 @@
     font-family: 'poppins',sans-serif;
   }
   :root{
-    --bg-color:#004643;
-    --second-bg-color:#33272a;
+    --bg-color:#078080;
+    --second-bg-color:#a786df;
     --text-color:#fff;
     --main-color:#ffd803;
   }
@@ -166,12 +166,28 @@ line-height: 1.2;
     margin-bottom: 2rem;
 }
 .skills-container {
-    display: flex;
+    font-size: 20px;
+    display: grid;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
+    padding: 3rem 2rem 4rem;
+    border-spacing: 28px;
+    cursor: pointer;
     
+}
+.skills-container table tr th h1:hover{
+    padding-left: 132px;
+    color: var(--second-bg-color);
+}
+.skills-container table tr th h1 {
+    color: var(--main-color);
+    padding-right: 16px;
+} 
+.skills-container table tr td h1{
+    padding-left: 16px;
+    color: var(--text-color);
 }
 
 .skills-container .skills-box {
@@ -289,10 +305,14 @@ width: 100%;
     width: 100%;
     padding: 1.5rem;
     font-size: 1.6rem;
+
     color: var(--text-color);
     background-color: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
+}
+.contact form ::placeholder{
+    color: #fff;
 }
 .contact form .input-box input {
     width:49%;
