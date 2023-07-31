@@ -372,6 +372,9 @@ width: 100%;
     .footer{
         padding: 2rem 3%;
     }
+ .skills-container{
+  width:100%;
+}
 }
 @media (max-width : 768px){
    
@@ -403,6 +406,9 @@ width: 100%;
         flex-direction: column;
 
     }
+ .skills-container{
+  width:100%;
+}
     .home-content h3 {
         font-size: 2.6rem;
     }
@@ -432,10 +438,15 @@ width: 100%;
     .contact form .input-box input{
         width: 100%;
     }
+ .skills-container{
+  width:100%;
 }
 @media (max-width : 365px){
 .home-img img{
     width:90vw;
+}
+ .skills-container{
+  width:100%;
 }
 .about-img img{
     width :90vw;
